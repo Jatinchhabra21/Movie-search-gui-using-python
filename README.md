@@ -1,4 +1,3 @@
-=======
 # Movie-search-gui-using-python
 
 ![image](https://github.com/Jatinchhabra21/Movie-search-gui-using-python/blob/main/Images/Screenshot%20(2).png)
