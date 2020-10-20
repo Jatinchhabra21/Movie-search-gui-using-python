@@ -87,13 +87,16 @@ class Application(Frame):
         self.new.mainloop()
 
     def getData(self):
-
-        self.create_new_window()
         try:
             self.data = get_movie(self.search.get(),self.type.get())
             self.new.title(self.data['Title'])
             self.new.iconbitmap('search.ico')
-        except _tkinter.TclError:
+        except TclError:
+            self.create_new_window()
+            self.data = get_movie(self.search.get(),self.type.get())
+            self.new.title(self.data['Title'])
+            self.new.iconbitmap('search.ico')
+        except AttributeError:
             self.create_new_window()
             self.data = get_movie(self.search.get(),self.type.get())
             self.new.title(self.data['Title'])
